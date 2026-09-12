@@ -16,5 +16,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 console.log("Firebase ligado com sucesso!");
+
 document.getElementById("estadoFirebase").textContent =
     "Firebase ligado com sucesso!";
