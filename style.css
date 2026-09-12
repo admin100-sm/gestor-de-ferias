@@ -1,0 +1,273 @@
+/* =========================================================
+   GESTOR DE FÉRIAS
+   DESIGN PREMIUM / ELEGANTE
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    --preto: #171717;
+    --preto-suave: #242424;
+    --dourado: #c9a227;
+    --dourado-claro: #e2c766;
+    --fundo: #f5f4f1;
+    --branco: #ffffff;
+    --texto: #242424;
+    --texto-suave: #77736b;
+    --borda: #e7e3da;
+    --sombra: 0 10px 35px rgba(0, 0, 0, 0.08);
+    --raio: 18px;
+}
+
+/* ---------------------------------------------------------
+   BASE
+   --------------------------------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(201, 162, 39, 0.08),
+            transparent 30%
+        ),
+        var(--fundo);
+
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* ---------------------------------------------------------
+   TÍTULO PRINCIPAL
+   --------------------------------------------------------- */
+
+h1 {
+    margin: 0;
+    padding: 32px 20px;
+
+    background: linear-gradient(
+        135deg,
+        #111111,
+        #292929
+    );
+
+    color: var(--branco);
+
+    text-align: center;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(30px, 5vw, 48px);
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 8px 30px rgba(0, 0, 0, 0.18);
+}
+
+h1::after {
+    content: "";
+    display: block;
+
+    width: 55px;
+    height: 3px;
+
+    margin: 14px auto 0;
+
+    background: linear-gradient(
+        90deg,
+        var(--dourado),
+        var(--dourado-claro)
+    );
+
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------------
+   TEXTO
+   --------------------------------------------------------- */
+
+p {
+    max-width: 700px;
+
+    margin: 45px auto;
+
+    padding: 0 25px;
+
+    text-align: center;
+
+    color: var(--texto-suave);
+
+    font-size: 17px;
+}
+
+/* ---------------------------------------------------------
+   SELEÇÃO DE TEXTO
+   --------------------------------------------------------- */
+
+::selection {
+    background: var(--dourado);
+    color: var(--branco);
+}
+
+/* ---------------------------------------------------------
+   SCROLLBAR
+   --------------------------------------------------------- */
+
+::-webkit-scrollbar {
+    width: 9px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eeeeeb;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b7b2a7;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--dourado);
+}
+
+/* ---------------------------------------------------------
+   BOTÕES
+   --------------------------------------------------------- */
+
+button {
+    border: none;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    background: var(--preto);
+    color: var(--branco);
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+button:hover {
+    background: #303030;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* ---------------------------------------------------------
+   CARTÕES
+   --------------------------------------------------------- */
+
+.card {
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: var(--raio);
+
+    padding: 25px;
+
+    box-shadow: var(--sombra);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 40px rgba(0, 0, 0, 0.11);
+}
+
+/* ---------------------------------------------------------
+   INPUTS
+   --------------------------------------------------------- */
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 11px;
+
+    background: var(--branco);
+
+    color: var(--texto);
+
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--dourado);
+
+    box-shadow:
+        0 0 0 3px rgba(201, 162, 39, 0.12);
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVO
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    h1 {
+        padding: 25px 15px;
+        font-size: 32px;
+    }
+
+    p {
+        margin-top: 30px;
+        font-size: 15px;
+    }
+
+    .card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
