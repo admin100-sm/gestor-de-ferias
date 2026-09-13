@@ -22,7 +22,7 @@ const db = getFirestore(app);
 document.getElementById("estadoFirebase").textContent =
     "Firebase ligado com sucesso!";
 
-async function guardarFuncionario(nome, funcao) {
+window.guardarFuncionario = async function(nome, funcao) {
 
     await addDoc(
         collection(db, "funcionarios"),
