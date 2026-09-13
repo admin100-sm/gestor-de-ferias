@@ -19,8 +19,12 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
-document.getElementById("estadoFirebase").textContent =
-    "Firebase ligado com sucesso!";
+const estadoFirebase = document.getElementById("estadoFirebase");
+
+if (estadoFirebase) {
+    estadoFirebase.textContent =
+        "Firebase ligado com sucesso!";
+}
 
 window.guardarFuncionario = async function(nome, funcao) {
 
