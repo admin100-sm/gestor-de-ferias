@@ -275,3 +275,29 @@ textarea:focus {
 #funcionariosPage {
     display: none;
 }
+
+.cabecalho-pagina a {
+    display: inline-block;
+
+    margin-bottom: 20px;
+
+    padding: 10px 16px;
+
+    border-radius: 10px;
+
+    background: var(--preto);
+
+    color: var(--branco);
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.cabecalho-pagina a:hover {
+    background: var(--dourado);
+
+    color: var(--branco);
+}
