@@ -102,10 +102,12 @@ async function carregarFuncionarios() {
         const item = document.createElement("div");
 
         item.innerHTML = `
-            <strong>${funcionario.nome}</strong>
-            <span>${funcionario.funcao}</span>
-        `;
-
+    <strong>${funcionario.nome}</strong>
+    <span>${funcionario.funcao}</span>
+    <button type="button" onclick="eliminarFuncionario('${idFuncionario}')">
+        Eliminar
+    </button>
+`;
         lista.appendChild(item);
 
     });
