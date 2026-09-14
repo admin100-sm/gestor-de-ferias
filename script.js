@@ -46,6 +46,7 @@ window.guardarFuncionario = async function(nome, funcao) {
         );
 
         alert("Funcionário guardado com sucesso!");
+        await carregarFuncionarios();
 
     } catch (erro) {
 
