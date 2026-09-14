@@ -28,12 +28,22 @@ if (estadoFirebase) {
 
 window.guardarFuncionario = async function(nome, funcao) {
 
-    await addDoc(
-        collection(db, "funcionarios"),
-        {
-            nome: nome,
-            funcao: funcao
-        }
-    );
+    try {
+
+        await addDoc(
+            collection(db, "funcionarios"),
+            {
+                nome: nome,
+                funcao: funcao
+            }
+        );
+
+        alert("Funcionário guardado com sucesso!");
+
+    } catch (erro) {
+
+        alert("Erro ao guardar funcionário: " + erro.message);
+
+    }
 
 }
