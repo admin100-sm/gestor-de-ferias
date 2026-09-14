@@ -96,6 +96,8 @@ async function carregarFuncionarios() {
     resultado.forEach((documento) => {
 
         const funcionario = documento.data();
+        
+        const idFuncionario = documento.id;
 
         const item = document.createElement("div");
 
