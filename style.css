@@ -301,3 +301,56 @@ textarea:focus {
 
     color: var(--branco);
 }
+
+.login-page {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 40px;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: var(--raio);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.12);
+
+    text-align: center;
+}
+
+.login-box h2 {
+    margin: 15px 0 5px;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 30px;
+}
+
+.login-box p {
+    margin: 10px 0 25px;
+
+    padding: 0;
+
+    font-size: 14px;
+}
+
+.login-box input {
+    margin-bottom: 12px;
+}
+
+.login-box button {
+    width: 100%;
+    margin-top: 8px;
+}
