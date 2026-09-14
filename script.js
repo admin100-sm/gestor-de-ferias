@@ -77,3 +77,34 @@ window.fazerLogin = async function() {
     }
 
 };
+
+async function carregarFuncionarios() {
+
+    const lista = document.getElementById("listaFuncionarios");
+
+    if (!lista) {
+        return;
+    }
+
+    const resultado = await getDocs(
+        collection(db, "funcionarios")
+    );
+
+    lista.innerHTML = "";
+
+    resultado.forEach((documento) => {
+
+        const funcionario = documento.data();
+
+        const item = document.createElement("div");
+
+        item.innerHTML = `
+            <strong>${funcionario.nome}</strong>
+            <span>${funcionario.funcao}</span>
+        `;
+
+        lista.appendChild(item);
+
+    });
+
+}
