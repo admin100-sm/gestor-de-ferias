@@ -7,7 +7,8 @@ import {
     getFirestore,
     collection,
     addDoc,
-    getDocs
+    getDocs,
+    deleteDoc
 } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
 const firebaseConfig = {
@@ -114,3 +115,29 @@ async function carregarFuncionarios() {
 
 }
 carregarFuncionarios();
+
+window.eliminarFuncionario = async function(idFuncionario) {
+
+    const confirmar = confirm("Tem a certeza que pretende eliminar este funcionário?");
+
+    if (!confirmar) {
+        return;
+    }
+
+    try {
+
+        await deleteDoc(
+            doc(db, "funcionarios", idFuncionario)
+        );
+
+        alert("Funcionário eliminado com sucesso!");
+
+        await carregarFuncionarios();
+
+    } catch (erro) {
+
+        alert("Erro ao eliminar funcionário: " + erro.message);
+
+    }
+
+};
