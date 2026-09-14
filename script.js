@@ -53,3 +53,26 @@ window.guardarFuncionario = async function(nome, funcao) {
     }
 
 }
+window.fazerLogin = async function() {
+
+    const email = document.getElementById("emailLogin").value;
+    const password = document.getElementById("passwordLogin").value;
+
+    try {
+
+        await signInWithEmailAndPassword(
+            auth,
+            email,
+            password
+        );
+
+        document.getElementById("loginPage").style.display = "none";
+        document.getElementById("conteudoPrincipal").style.display = "block";
+
+    } catch (erro) {
+
+        alert("E-mail ou palavra-passe incorretos.");
+
+    }
+
+};
